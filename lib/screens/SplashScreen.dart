@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Spacer(),
             Text(
-              'A R I S T O',
-              style: TextStyle(
+              'Aristo',
+              style: GoogleFonts.majorMonoDisplay(
                 fontSize: 60,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.normal,
                 letterSpacing: 2.0,
               ),
             ),
@@ -23,21 +24,20 @@ class SplashScreen extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               'Version 1.0',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
+              style: GoogleFonts.marvel(
+                fontSize: 12,
               ),
             ),
             SizedBox(height: 20),
             Text(
               '© 2024 All rights reserved\nPowered by HIGHSILICON',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.marvel(
                 fontSize: 12,
                 color: Colors.grey,
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
           ],
         ),
       ),
