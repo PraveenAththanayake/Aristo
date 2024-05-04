@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             Text(
               'Aristo',
               style: GoogleFonts.majorMonoDisplay(
@@ -20,15 +20,15 @@ class SplashScreen extends StatelessWidget {
                 letterSpacing: 2.0,
               ),
             ),
-            Spacer(),
-            SizedBox(height: 20),
+            const Spacer(),
+            const SizedBox(height: 20),
             Text(
               'Version 1.0',
               style: GoogleFonts.marvel(
                 fontSize: 12,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               '© 2024 All rights reserved\nPowered by HIGHSILICON',
               textAlign: TextAlign.center,
