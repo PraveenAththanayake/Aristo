@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomInputField extends StatelessWidget {
-  const CustomInputField(this.hintText, {super.key});
-
-  final String hintText;
+  const CustomInputField({super.key});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
         decoration: InputDecoration(
-            hintText: hintText,
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             enabledBorder: OutlineInputBorder(
