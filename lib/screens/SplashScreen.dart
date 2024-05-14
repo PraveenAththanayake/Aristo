@@ -1,4 +1,3 @@
-import 'package:aristo/common/widgets/CustomInputField.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -39,7 +38,6 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 50),
-            CustomInputField(),
           ],
         ),
       ),
