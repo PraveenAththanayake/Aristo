@@ -1,3 +1,4 @@
+import 'package:aristo/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class TextFieldLabel extends StatelessWidget {
@@ -10,7 +11,7 @@ class TextFieldLabel extends StatelessWidget {
     return Text(text,
         style: const TextStyle(
           fontSize: 15,
-          color: Colors.grey,
+          color: AppColors.secondaryColor,
         ));
   }
 }
