@@ -1,3 +1,4 @@
+import 'package:aristo/screens/CreateAccountScreen.dart';
 import 'package:aristo/screens/LoginScreen.dart';
 import 'package:aristo/screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.anticDidoneTextTheme(),
       ),
-      home: const LoginScreen(),
+      home: const CreateAccountScreen(),
     );
   }
 }
