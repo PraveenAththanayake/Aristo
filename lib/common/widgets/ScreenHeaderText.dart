@@ -11,7 +11,7 @@ class ScreenHeaderText extends StatelessWidget {
     return Text(
       text,
       style: GoogleFonts.anticDidone(
-        fontSize: 45,
+        fontSize: MediaQuery.of(context).size.width * 0.1,
         fontWeight: FontWeight.normal,
       ),
     );
