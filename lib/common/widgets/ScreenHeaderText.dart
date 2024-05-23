@@ -10,6 +10,7 @@ class ScreenHeaderText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      textAlign: TextAlign.center,
       style: GoogleFonts.anticDidone(
         fontSize: MediaQuery.of(context).size.width * 0.1,
         fontWeight: FontWeight.normal,
