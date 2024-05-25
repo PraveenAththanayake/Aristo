@@ -24,23 +24,23 @@ class GiveNewPasswordScreen extends StatelessWidget {
               children: [
                 if (MediaQuery.of(context).viewInsets.bottom > 0)
                   const SizedBox(height: 20),
-                const ScreenHeaderText('Login'),
+                const ScreenHeaderText('Give New Password'),
                 SizedBox(height: screenHeight * 0.08),
                 const Form(
                   child: Column(
                     children: [
-                      TextFieldLabel('WhatsApp Number'),
+                      TextFieldLabel('Password'),
                       SizedBox(height: 13),
                       CustomInputField(keyboardType: TextInputType.phone),
                       SizedBox(height: 32),
-                      TextFieldLabel('Password'),
+                      TextFieldLabel('Confirm Password'),
                       SizedBox(height: 13),
                       CustomInputField(keyboardType: TextInputType.text),
                     ],
                   ),
                 ),
                 SizedBox(height: screenHeight * 0.05),
-                const CustomButton('Login'),
+                const CustomButton('Reset'),
               ],
             ),
           ),
