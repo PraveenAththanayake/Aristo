@@ -20,12 +20,11 @@ class TeacherProfileScreen extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.all(padding),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (MediaQuery.of(context).viewInsets.bottom > 0)
                   const SizedBox(height: 20),
-                const ScreenHeaderText('Login'),
-                SizedBox(height: screenHeight * 0.08),
+                const ScreenHeaderText('Create\nTeacher Profile'),
+                SizedBox(height: screenHeight * 0.05),
                 const Form(
                   child: Column(
                     children: [

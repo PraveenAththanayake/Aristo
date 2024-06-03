@@ -1,10 +1,13 @@
-import 'package:aristo/common/widgets/CustomButton.dart';
-import 'package:aristo/common/widgets/CustomInputField.dart';
-import 'package:aristo/common/widgets/ScreenHeaderText.dart';
-import 'package:aristo/common/widgets/TextFieldLabel.dart';
-import 'package:aristo/theme/app_colors.dart';
+// lib/views/login_screen.dart
+import 'package:aristo/view_models/login_viewmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../common/widgets/CustomButton.dart';
+import '../common/widgets/CustomInputField.dart';
+import '../common/widgets/ScreenHeaderText.dart';
+import '../common/widgets/TextFieldLabel.dart';
+import '../theme/app_colors.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -28,18 +31,26 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                 const ScreenHeaderText('Login'),
                 SizedBox(height: screenHeight * 0.08),
-                const Form(
-                  child: Column(
-                    children: [
-                      TextFieldLabel('WhatsApp Number'),
-                      SizedBox(height: 13),
-                      CustomInputField(keyboardType: TextInputType.phone),
-                      SizedBox(height: 32),
-                      TextFieldLabel('Password'),
-                      SizedBox(height: 13),
-                      CustomInputField(keyboardType: TextInputType.text),
-                    ],
-                  ),
+                Consumer<LoginViewModel>(
+                  builder: (context, viewModel, child) {
+                    return const Form(
+                      child: Column(
+                        children: [
+                          TextFieldLabel('WhatsApp Number'),
+                          SizedBox(height: 13),
+                          CustomInputField(
+                            keyboardType: TextInputType.phone,
+                          ),
+                          SizedBox(height: 32),
+                          TextFieldLabel('Password'),
+                          SizedBox(height: 13),
+                          CustomInputField(
+                            keyboardType: TextInputType.text,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
                 SizedBox(height: screenHeight * 0.02),
                 Padding(
@@ -64,7 +75,13 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: screenHeight * 0.05),
-                const CustomButton('Login'),
+                Consumer<LoginViewModel>(
+                  builder: (context, viewModel, child) {
+                    return const CustomButton(
+                      'Login',
+                    );
+                  },
+                ),
                 SizedBox(height: screenHeight * 0.05),
                 RichText(
                   text: TextSpan(
