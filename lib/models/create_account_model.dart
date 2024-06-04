@@ -1,7 +1,7 @@
 class CreateAccountModel {
   String? phoneNumber;
   String? password;
-  String? confirmPassword;
+  String? username;
 
-  CreateAccountModel({this.phoneNumber, this.password, this.confirmPassword});
+  CreateAccountModel({this.phoneNumber, this.password, this.username});
 }
