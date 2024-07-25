@@ -1,3 +1,4 @@
+import 'package:aristo/screens/LoginScreen.dart';
 import 'package:aristo/view_models/create_account_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -77,17 +78,34 @@ class CreateAccountScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: screenHeight * 0.05),
-                RichText(
-                  text: TextSpan(
-                    style: GoogleFonts.anticDidone(
-                      fontSize: 15,
-                      color: AppColors.secondaryColor,
-                    ),
-                    children: const [
-                      TextSpan(text: 'Already have an account? '),
-                      TextSpan(
-                        text: 'Login Now',
-                        style: TextStyle(color: AppColors.primaryColor),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Already have an account? ',
+                        style: TextStyle(color: AppColors.secondaryColor),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
+                          );
+                        },
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          minimumSize: Size(0, 0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                        child: const Text(
+                          'Login Now',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
                       ),
                     ],
                   ),
