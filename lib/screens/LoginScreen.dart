@@ -1,4 +1,5 @@
 // lib/views/login_screen.dart
+import 'package:aristo/screens/CreateAccountScreen.dart';
 import 'package:aristo/view_models/login_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -83,17 +84,35 @@ class LoginScreen extends StatelessWidget {
                   },
                 ),
                 SizedBox(height: screenHeight * 0.05),
-                RichText(
-                  text: TextSpan(
-                    style: GoogleFonts.anticDidone(
-                      fontSize: 15,
-                      color: AppColors.secondaryColor,
-                    ),
-                    children: const [
-                      TextSpan(text: 'Not have an account? '),
-                      TextSpan(
-                        text: 'Register Now',
-                        style: TextStyle(color: AppColors.primaryColor),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Not have an account? ',
+                        style: TextStyle(color: AppColors.secondaryColor),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const CreateAccountScreen()),
+                          );
+                        },
+                        style: TextButton.styleFrom(
+                          padding: EdgeInsets.zero,
+                          minimumSize: const Size(0, 0),
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        ),
+                        child: const Text(
+                          'Register Now',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
                       ),
                     ],
                   ),
